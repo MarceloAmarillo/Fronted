@@ -1,0 +1,15 @@
+div{
+    background-color: rgb(10, 132, 231);
+}
+
+app-login{
+    float: right;
+    margin-bottom: 50px;
+    align-items: right;
+}
+
+app-redes{
+    float: right;
+    margin: top 25px;
+}
+

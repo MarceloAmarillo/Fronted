@@ -1,0 +1,11 @@
+div{
+    background-color: rgb(10, 132, 231);
+    
+}
+footer{
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+    box-shadow: 10px 10px 30px #000000;
+}

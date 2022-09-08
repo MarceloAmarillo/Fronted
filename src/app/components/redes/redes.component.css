@@ -1,8 +1,11 @@
-app-login{
-    width: 98px;
-    float: right;
-    margin: right 30px;
-    margin: top 50px;
+div{
+    width: 200px;
+    background-position: center;
+}
+
+button{
+    background-color: rgb(6, 175, 6);
+    font-weight: bold;
 }
 img{
     width: 50px;

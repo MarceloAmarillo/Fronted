@@ -1,32 +1,24 @@
-.container{
+#container{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items:center;
+    margin-left: 0cm;
+    margin-right: 0cm;
 }
-.redes{
-    margin-right: 0.5em;
-}
-#logoAP{
-    width: 123px;
+button{
+    background-color: rgb(6, 175, 6);
+    font-weight: bold;
+    align-self: start;
 }
 img{
     width: 50px;
+    align-items: center;
+    
 }
-.btn{
-    border-width: medium;
+#logoap{
+    width: 150px;
+    float: left;
 }
-
-/*--- Para la vista de celular ---*/
-@media (max-width: 575px){
-    .container{
-        flex-direction: column;
-    }
-    .redes{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .redes img{
-        margin: 0.2em;
-    }
+.redes{
+   float: right;
 }

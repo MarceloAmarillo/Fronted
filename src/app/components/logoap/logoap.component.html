@@ -1,1 +1,11 @@
-<img src="../../../assets/image/APLogo-20-20.png" id="logoap">
+<div class="container">
+    <img src="../../../assets/image/APLogo-20-20.png" id="logoap">
+    <div class="redes">
+        <a href=""><img src="../../../assets/image/instagram.png" id="instagram"></a>
+        <a href=""><img src="../../../assets/image/facebook.png" id="facebook"></a>
+        <button type="button" class="btn btn-outline-light" (click)="login()" *ngIf="!isLogged">INGRESO</button>
+        <button type="button" class="btn btn-outline-light" (click)="onLogOut()" *ngIf="isLogged">CERRAR SESION</button>
+    </div>
+</div>
+
+

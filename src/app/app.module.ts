@@ -5,35 +5,37 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
-import { LogoapComponent } from './components/logoap/logoap.component';
-import { RedesComponent } from './components/redes/redes.component';
-import { LoginComponent } from './components/login/login.component';
 import { BannerComponent } from './components/banner/banner.component';
-import { AcercaComponent } from './components/acerca/acerca.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
-import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HysComponent } from './components/hys/hys.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { ProyectosComponent } from './components/proyectos/proyectos.component';
-import {HttpClientModule} from  '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HomeComponent } from './components/home/home.component';
-import { interceptroProvider } from './service/interceptor-service';
+import { LoginComponent } from './components/login/login.component';
+import { interceptorProvider } from './service/interceptor-service';
+import { NewExperienciaComponent } from './components/experiencia/new-experiencia.component';
+import { AcercaComponent } from './components/acerca/acerca.component';
+import { ProyectosComponent } from './components/proyectos/proyectos.component';
+import { LogoAPComponent } from './components/logoap/logoap.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    LogoapComponent,
-    RedesComponent,
-    LoginComponent,
+    LogoAPComponent,
     BannerComponent,
-    AcercaComponent,
     ExperienciaComponent,
     EducacionComponent,
     HysComponent,
     FooterComponent,
+    HomeComponent,
+    LoginComponent,
+    AcercaComponent,
     ProyectosComponent,
-    HomeComponent
+    NewExperienciaComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,7 @@ import { interceptroProvider } from './service/interceptor-service';
     HttpClientModule
   ],
   providers: [
-    interceptroProvider
+    interceptorProvider
   ],
   bootstrap: [AppComponent]
 })

@@ -19,6 +19,7 @@ import { NewExperienciaComponent } from './components/experiencia/new-experienci
 import { AcercaComponent } from './components/acerca/acerca.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { LogoAPComponent } from './components/logoap/logoap.component';
+import { EditexperienciaComponent } from './components/experiencia/editexperiencia.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { LogoAPComponent } from './components/logoap/logoap.component';
     AcercaComponent,
     ProyectosComponent,
     NewExperienciaComponent,
+    EditexperienciaComponent,
   ],
   imports: [
     BrowserModule,

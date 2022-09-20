@@ -15,8 +15,8 @@ expURL = 'http://localhost:8080/explab/';
     return this.httpClient.get<Experiencia[]>(this.expURL + 'lista');
   }
 
-  public detail(id: number): Observable<Experiencia[]>{
-    return this.httpClient.get<Experiencia[]>(this.expURL + `deteils/${id}`);
+  public detail(id: number): Observable<Experiencia>{
+    return this.httpClient.get<Experiencia>(this.expURL + `details/${id}`);
   }
 
   public save(experiencia: Experiencia): Observable<any>{

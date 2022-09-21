@@ -20,6 +20,8 @@ import { AcercaComponent } from './components/acerca/acerca.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { LogoAPComponent } from './components/logoap/logoap.component';
 import { EditexperienciaComponent } from './components/experiencia/editexperiencia.component';
+import { NeweducacionComponent } from './components/educacion/neweducacion.component';
+
 
 
 @NgModule({
@@ -38,6 +40,8 @@ import { EditexperienciaComponent } from './components/experiencia/editexperienc
     ProyectosComponent,
     NewExperienciaComponent,
     EditexperienciaComponent,
+    NeweducacionComponent
+
   ],
   imports: [
     BrowserModule,

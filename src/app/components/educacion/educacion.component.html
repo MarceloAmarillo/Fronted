@@ -1,7 +1,7 @@
 <div class="row">
     <h1>Educación</h1>
     <div class="col-lg-2">
-        <button type="button" class="btn btn-success" routerLink="/nuevaexp" *ngIf="isLogged">
+        <button type="button" class="btn btn-success" routerLink="/nuevaedu" *ngIf="isLogged">
             Nueva Educacion
         </button>
     </div>
@@ -18,7 +18,7 @@
                         <p>{{Educacion.descripcionE}}</p>
                     </td>
                     <td *ngIf="isLogged">
-                        <button class="btn btn-success" routerLink="/editexp/{{Educacion.id}}">
+                        <button class="btn btn-success" routerLink="/nuevaedu{{Educacion.id}}">
                             <i class="bi bi-pen-fill"></i> </button>
                     </td>
                     <td *ngIf="isLogged">

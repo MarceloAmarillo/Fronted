@@ -1,10 +1,6 @@
-.row{
-    padding: 20px;
-}
-h1, h3{
-    display: inline
-}
-.row{
+.container{
+    padding-bottom: 100%;
+    max-width: 100%;
     /* fallback for old browsers */
     background: #6a11cb;
    
@@ -14,8 +10,17 @@ h1, h3{
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
 
-
 }
-p,h1,h2,h3{
+
+.row{
+   padding: 10px;
+   margin-right: 50%;
+}
+
+h1, h3{
+    display: inline
+}
+
+.form-group{
     color: antiquewhite;
 }

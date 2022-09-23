@@ -21,6 +21,7 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { LogoAPComponent } from './components/logoap/logoap.component';
 import { EditexperienciaComponent } from './components/experiencia/editexperiencia.component';
 import { NeweducacionComponent } from './components/educacion/neweducacion.component';
+import { EditeducacionComponent } from './components/educacion/editeducacion.component';
 
 
 
@@ -40,7 +41,8 @@ import { NeweducacionComponent } from './components/educacion/neweducacion.compo
     ProyectosComponent,
     NewExperienciaComponent,
     EditexperienciaComponent,
-    NeweducacionComponent
+    NeweducacionComponent,
+    EditeducacionComponent
 
   ],
   imports: [

@@ -9,12 +9,10 @@
 }
 @media(min-width: 576px){
     #fotoperfil{
-        position: absolute;
-        width: 12%;
+        
         border-radius: 100%;
         box-shadow: 3px 3px rgb(106, 17, 203,1) ;
-        left: 1%;
-        margin-top: -200px;
+        
     }
 }
 

@@ -28,6 +28,7 @@ import { EditacercaComponent } from './components/acerca/editacerca.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
+import { EditbannerComponent } from './components/banner/editbanner.component';
 
 
 
@@ -51,7 +52,8 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     EditeducacionComponent,
     EditSkillComponent,
     NewSkillComponent,
-    EditacercaComponent
+    EditacercaComponent,
+    EditbannerComponent
 
   ],
   imports: [

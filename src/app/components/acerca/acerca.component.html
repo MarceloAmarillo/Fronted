@@ -6,13 +6,14 @@
     <h3><p><strong>{{persona.nombre}} {{persona.apellido}}</strong></p></h3>
     <h4><p><strong>Full Stack Devolper jr</strong></p></h4>
 </div>
-<div class="col-xs-10 col-sm-8 col-md-8 col-lg-8">
+<div class="col-xs-10 col-sm-8 col-md-8 col-lg-8 " id="descripcion">
     <span>
         <h1>Acerca de mí</h1>
         <p>{{persona.descripcion}}</p>
     </span>
-    </div> <div class="row">
-        <div class="col-lg-2">
+    </div> 
+    <div >
+        <div>
             <button type="button" class="btn btn-success" routerLink="/editacerca/1" *ngIf="isLogged">
                 Editar Persona
             </button>

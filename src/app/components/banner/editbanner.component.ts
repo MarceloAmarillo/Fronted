@@ -14,23 +14,24 @@ export class EditbannerComponent implements OnInit {
 
   constructor(private activatedRouter: ActivatedRoute, private BannerService: BannerService,
     private router: Router, public imageService: ImageService) { }
- banner: Banner= null;
+  banner: Banner = null;
+  
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
     this.BannerService.detail(id).subscribe(
-      data =>{
+      data => {
         this.banner = data;
-      }, err =>{
-         alert("Error al modificar");
-         this.router.navigate(['']);
+      }, err => {
+        alert("Error al modificar");
+        this.router.navigate(['']);
       }
     )
   }
 
   onUpdate(): void {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.banner.img = this.imageService.url
-    this.BannerService.update(id, this.banner).subscribe(
+    this.banner.img= this.imageService.url 
+    this.BannerService.update(id,this.banner).subscribe(
       data => {
         this.router.navigate(['']);
       }, err => {
@@ -40,9 +41,9 @@ export class EditbannerComponent implements OnInit {
     )
   }
 
-  uploadImage($event: any){
-    const id= this.activatedRouter.snapshot.params['id'];
-    const name= "banner_" + id;
+  uploadImage($event: any) {
+    const id = this.activatedRouter.snapshot.params['id'];
+    const name ='banner_' + id;
     this.imageService.uploadImage($event, name);
 
   }

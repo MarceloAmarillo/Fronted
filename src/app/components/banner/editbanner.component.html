@@ -3,8 +3,8 @@
         <div>
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
                 <div class="form-group">
-                    <label for="img">Imagen</label>
-                    <input type="file" class="form-control" id="img" name="img" [(ngModel)]="banner.img" (change)="uploadImage($event)"
+                    <label for="banner">Banner</label>
+                    <input type="file" class="form-control" id="banner" name="banner" [(ngModel)]="banner.img" (change)="uploadImage($event)"
                     accept=".jpg, .jpeg, .png">
                 </div>
                 <div class="imagen">

@@ -9,7 +9,8 @@ import { Banner } from '../model/banner';
 })
 export class BannerService {
 
-  URL = environment.URL + '/banner';
+  URL = environment.URL + 'banner/';
+  
   constructor(private httpClient: HttpClient) { }
  
   public lista(): Observable<Banner[]>{

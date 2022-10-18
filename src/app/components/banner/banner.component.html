@@ -1,9 +1,9 @@
-<div class="row">
+<div class="row"*ngIf="banner">
     <div class="col-lg-12">
-        <img src={{banner.img}} class="img-fluid" id="banner">
+        <img src="https://firebasestorage.googleapis.com/v0/b/frontendma.appspot.com/o/imagen%2Fbanner_1?alt=media&token=2c315afe-21c8-4630-80c8-4ce502395a9b" class="img-fluid" id="banner">
     </div>
     <div>
-        <button type="button" class="btn btn-success" routerLink="/editbanner/1" *ngIf="isLogged">
+        <button type="button" class="btn btn-success" routerLink="/editbanner/1" *ngIf="isLogged" id="button">
             Editar Banner
         </button>
     </div>

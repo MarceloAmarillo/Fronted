@@ -29,6 +29,8 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { EditbannerComponent } from './components/banner/editbanner.component';
+import { NewproyectoComponent } from './components/proyectos/newproyecto.component';
+import { EditproyectoComponent } from './components/proyectos/editproyecto.component';
 
 
 
@@ -53,7 +55,9 @@ import { EditbannerComponent } from './components/banner/editbanner.component';
     EditSkillComponent,
     NewSkillComponent,
     EditacercaComponent,
-    EditbannerComponent
+    EditbannerComponent,
+    NewproyectoComponent,
+    EditproyectoComponent
 
   ],
   imports: [

@@ -4,16 +4,16 @@
             <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
                 <div class="form-group">
                     <label for="nombreE">Nombre del Proyecto</label>
-                    <input type="text" class="form-control" id="nombreE" name="nombreE" [(ngModel)]="proyecto.nombreP" required>
+                    <input type="text" class="form-control" id="nombreE" name="nombreE" [(ngModel)]="nombreP" required>
                 </div>
                 
                 <div class="form-group">
                     <label for="descripcionP">Descripcion del Proyecto</label>
-                    <input type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="proyecto.descripcionP" required>
+                    <input type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="descripcionP" required>
                 </div>
                 <div>
                     <label for="url">URL</label>
-                    <input type="text" class="form-control" id="url" name="url" [(ngModel)]="proyecto.url" required>
+                    <input type="url" class="form-control" id="url" name="url" [(ngModel)]="url" required>
                 </div>
                <div class="form-group">
                     <label for="img">Imagen</label>
@@ -22,6 +22,7 @@
                 </div> 
                 <div class="imagen">
                     <img [src]="imageService.url" width="200px">
+                    
 
                 </div>
                 <button class="btn btn-success">

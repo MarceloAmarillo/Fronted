@@ -1,39 +1,29 @@
-<div class="row">
+<div class="row" *ngIf="proyectos">
     <h1>Proyectos</h1>
-    <div class="col-lg-2">
-        <button type="button" class="btn btn-success" routerLink="/nuevoproyecto" *ngIf="isLogged">
-            Nuevo Proyecto
-        </button>
-    </div>
-
-    <div class="col lg 1"></div>
-    <div class="col-lg-11">
-        <table class="table">
-            <tbody>
-                <tr *ngFor="let Proyectos of proyecto">
-                    <td>
-                        <h2>{{Proyectos.nombreP}}</h2>
-                    </td>
-                    <td>
-                        <p>{{Proyectos.descripcionP}}</p>
-                    </td>
-                    <td>
-                        <img src= {{Proyectos.img}}>
-                    </td>
-                    <td>
-                        <p>{{Proyectos.url}}</p>
-                    </td>
-                    <td *ngIf="isLogged">
-                        <button class="btn btn-success" routerLink="/editproyecto/{{Proyectos.id}}">
-                            <i class="bi bi-pen-fill"></i> </button>
-                    </td>
-                    <td *ngIf="isLogged">
-                        <button class="btn btn-danger" (click)="delete(Proyectos.id)">
-                            <i class="bi bi-file-x-fill"></i> </button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+    <div class="container">
+        <div class="col-lg-2" id="proyecto">
+            <button type="button" class="btn btn-success" routerLink="/newproyecto" *ngIf="isLogged">
+                Nuevo Proyecto
+            </button>
+            <br>
+            <br>
+        </div>
+        <div class="col-lg-11">
+            <div class="card" style="width: 18rem;" *ngFor="let Proyectos of proyectos">
+                <img class="card-img-top" src={{Proyectos.img}} alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{Proyectos.nombreP}}</h5>
+                    <p class="card-text">{{Proyectos.descripcionP}}</p>
+                    <a href={{Proyectos.url}} class="btn btn-primary">ir al proyecto </a>
+                </div>
+                <div>
+                    <button class="btn btn-success" routerLink="/editproyecto/{{Proyectos.id}}" *ngIf="isLogged">
+                        <i class="bi bi-pen-fill"></i> </button>
+                    <button class="btn btn-danger" (click)="delete(Proyectos.id)" *ngIf="isLogged">
+                        <i class="bi bi-file-x-fill"></i> </button>
+                </div>
+            </div>
+        </div>
     </div>
 
 </div>

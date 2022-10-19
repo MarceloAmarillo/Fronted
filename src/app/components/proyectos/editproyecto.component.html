@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" >
     <div class="row">
         <div>
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
@@ -19,7 +19,7 @@
                 </div>
                 <div>
                     <label for="url">URL</label>
-                    <input type="text" class="form-control" id="url" name="url" [(ngModel)]="proyecto.url" required>
+                    <input type="url" class="form-control" id="url" name="url" [(ngModel)]="proyecto.url" required>
                 </div>
                 <div class="imagen">
                     <img [src]="imageService.url" width="200px">

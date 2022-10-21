@@ -14,8 +14,9 @@
                 <div class="card-body">
                     <h5 class="card-title">{{Proyectos.nombreP}}</h5>
                     <p class="card-text">{{Proyectos.descripcionP}}</p>
-                    <a href={{Proyectos.url}} class="btn btn-primary">ir al proyecto </a>
-                </div>
+                    <a href={{Proyectos.url}} target="_blank"><button class="btn btn-dark">Link Proyecto</button></a>
+                
+                    </div>
                 <div>
                     <button class="btn btn-success" routerLink="/editproyecto/{{Proyectos.id}}" *ngIf="isLogged">
                         <i class="bi bi-pen-fill"></i> </button>

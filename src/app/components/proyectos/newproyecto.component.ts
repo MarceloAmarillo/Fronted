@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Proyecto } from 'src/app/model/proyecto';
 import { ImageService } from 'src/app/service/image.service';
 import { ProyectoService } from 'src/app/service/proyecto.service';
+import { TokenService } from 'src/app/service/token.service';
 
 
 @Component({
@@ -13,19 +14,30 @@ import { ProyectoService } from 'src/app/service/proyecto.service';
 export class NewproyectoComponent implements OnInit {
   nombreP: string = '';
   descripcionP: string = '';
-  img: string= '';
-  url: string= '';
+  img: string = '';
+  url: string = '';
 
-  constructor(private sProyectos: ProyectoService, private router: Router, private activatedRouter: ActivatedRoute, public imageService: ImageService ) { }
+  constructor(private sProyecto: ProyectoService, 
+              private router: Router,
+              public imageServiceLogoP: ImageService,
+              private tokenService: TokenService) { }
 
-  proyecto: Proyecto= null;
+  isLogged = false;
 
   ngOnInit(): void {
+
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
+
   }
 
   onCreate(): void {
-    const proyecto = new Proyecto(this.nombreP, this.descripcionP, this.img, this.url);
-    this.sProyectos.save(proyecto).subscribe(
+    this.img = this.imageServiceLogoP.url;
+    const proy = new Proyecto(this.nombreP, this.descripcionP, this.img,this.url);
+    this.sProyecto.save(proy).subscribe(
       data => {
         alert("Proyecto añadido");
         this.router.navigate(['']);
@@ -34,11 +46,22 @@ export class NewproyectoComponent implements OnInit {
         this.router.navigate(['']);
       }
     )
-  }
-  uploadImage($event: any) {
-    const id = this.activatedRouter.snapshot.params['id'];
-    const name ='Proyecto_' + id;
-    this.imageService.uploadImage($event, name);
+    this.imageServiceLogoP.clearUrl();
 
   }
+
+  uploadImage($event:any) {
+
+    const carpeta = "imagenProy"
+    this.imageServiceLogoP.uploadImage($event, carpeta);
+
+  }
+
+  cancel(): void {
+
+    this.imageServiceLogoP.clearUrl();
+    this.router.navigate(['']);
+
+  }
+
 }

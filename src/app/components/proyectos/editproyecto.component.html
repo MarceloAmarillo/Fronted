@@ -4,25 +4,25 @@
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
                 <div class="form-group">
                     <label for="nombreP">Nombre del Proyecto</label>
-                    <input type="text" class="form-control" id="nombreP" name="nombreP" [(ngModel)]="proyecto.nombreP" required>
+                    <input type="text" class="form-control" id="nombreP" name="nombreP" [(ngModel)]="proy.nombreP" required>
                 </div>
                 
                 <div class="form-group">
                     <label for="descripcionP">Descripcion del Proyecto</label>
-                    <input type="text" class="form-control" id="descripcionP" name="descripcionP" [(ngModel)]="proyecto.descripcionP" required>
+                    <input type="text" class="form-control" id="descripcionP" name="descripcionP" [(ngModel)]="proy.descripcionP" required>
                 </div>
                 <div class="form-group">
                     <label for="img">Imagen</label>
-                    <input type="file" class="form-control" id="img" name="img" [(ngModel)]="proyecto.img" (change)="uploadImage($event)"
+                    <input type="file" class="form-control" id="img" name="img" [(ngModel)]="proy.img" (change)="uploadImage($event)"
                     accept=".jpg, .jpeg, .png">
 
                 </div>
                 <div>
                     <label for="url">URL</label>
-                    <input type="url" class="form-control" id="url" name="url" [(ngModel)]="proyecto.url" required>
+                    <input type="url" class="form-control" id="url" name="url" [(ngModel)]="proy.url" required>
                 </div>
                 <div class="imagen">
-                    <img [src]="imageService.url" width="200px">
+                    <img [src]="imageServiceLogoP.url" width="200px">
 
                 </div>
                 <button class="btn btn-success">
